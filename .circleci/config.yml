@@ -243,7 +243,7 @@ workflows:
             tags:
               only: /v[0-9]+(\.[0-9]+)*/
             branches:
-              only: patch-1
+              only: bukasaaime-patch-1
       - slack-announcement:
           context: org-global
           requires:
