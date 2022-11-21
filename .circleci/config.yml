@@ -91,7 +91,7 @@ jobs:
           <<: *defaults_Dependencies
       - checkout
       - run:
-          name: Placeholder for setup
+          name: Integrity and Provenance
           command: echo "Integrity and Provence"
 
   test:
@@ -247,6 +247,18 @@ workflows:
       #     filters:
       #       tags:
       #         only: /.*/
+      
+      ################ Integrity and Provenance Provenance
+      - provenance:
+          context: org-global
+          # requires:
+          #  - test
+          #  - audit-licenses
+          filters:
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*/
+            branches:
+              only: bukasaaime-patch-1
       - deploy:
           context: org-global
           requires:
