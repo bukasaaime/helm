@@ -80,6 +80,19 @@ jobs:
       - run:
           name: Placeholder for setup
           command: echo "Placeholder for setup - Nothing to do here"
+          
+  ############################        
+  ### Integrity and Provenance
+  ############################
+  provenance:
+    executor: default-docker-helm
+    steps:
+      - run:
+          <<: *defaults_Dependencies
+      - checkout
+      - run:
+          name: Placeholder for setup
+          command: echo "Integrity and Provence"
 
   test:
     executor: default-docker-helm
