@@ -82,7 +82,7 @@ jobs:
           command: echo "Placeholder for setup - Nothing to do here"
       - run:
           name: Install Curl
-          command: sudo apt install curl
+          command: apt install curl
           
   ############################        
   ### Integrity and Provenance
