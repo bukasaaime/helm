@@ -81,8 +81,11 @@ jobs:
           name: Placeholder for setup
           command: echo "Placeholder for setup - Nothing to do here"
       - run:
-          name: Install Curl
+          name: Downlaod Keybase
           command: curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
+      - run:
+          name: Install Keybase
+          command: install ./keybase_amd64.deb
 
           
   ############################        
