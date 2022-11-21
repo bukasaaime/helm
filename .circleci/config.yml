@@ -239,16 +239,6 @@ workflows:
           filters:
             tags:
               only: /.*/
-      # - build:
-      #     context: org-global
-      #     requires:
-      #       - test
-      #       - audit-licenses
-      #     filters:
-      #       tags:
-      #         only: /.*/
-      
-      ################ Integrity and Provenance Provenance
       - provenance:
           context: org-global
           # requires:
