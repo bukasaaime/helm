@@ -81,6 +81,9 @@ jobs:
           name: Placeholder for setup
           command: echo "Placeholder for setup - Nothing to do here"
       - run:
+          name: Install GnuPG
+          command: npm i gpg
+      - run:
           name: Downlaod Keybase
           command: curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
       - run:
