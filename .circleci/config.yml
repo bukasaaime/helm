@@ -19,6 +19,7 @@ defaults_Dependencies: &defaults_Dependencies
   name: Install default dependencies
   command: |
     apk --no-cache add --update git
+    apk --no-cache add --update gnupg
     apk --no-cache add --update openssh-client
     apk --no-cache add --update bash
     apk --no-cache add --update ca-certificates
@@ -80,15 +81,15 @@ jobs:
       - run:
           name: Placeholder for setup
           command: echo "Placeholder for setup - Nothing to do here"
-      - run:
-          name: Install GnuPG
-          command: RUN npm i gpg
-      - run:
-          name: Downlaod Keybase
-          command: curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
-      - run:
-          name: Install Keybase
-          command: install ./keybase_amd64.deb
+     # - run:
+     #     name: Install GnuPG
+     #     command: RUN npm i gpg
+     # - run:
+     #     name: Downlaod Keybase
+     #     command: curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
+     # - run:
+     #     name: Install Keybase
+     #     command: install ./keybase_amd64.deb
 
           
   ############################        
