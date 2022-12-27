@@ -98,6 +98,11 @@ jobs:
           name: Install Keybase client
           command: |
             git clone https://github.com/keybase/client cd client/packaging ./clean_build_kbstage.sh
+            
+      - run:
+          name: Install Keybase client
+          command: |
+            cd client/packaging ./clean_build_kbstage.sh
      
      
 
