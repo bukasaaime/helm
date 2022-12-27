@@ -28,7 +28,7 @@ defaults_Dependencies: &defaults_Dependencies
     apk --no-cache add --update curl
     apk add --no-cache --update -t python2
     apk add --no-cache --update -t build-dependencies make gcc g++ libtool autoconf automake
-    apk add --no-cache --update keybase-client
+    # apk add --no-cache --update keybase-client
 
 defaults_license_scanner: &defaults_license_scanner
   name: Install and set up license-scanner
