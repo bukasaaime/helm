@@ -103,6 +103,12 @@ jobs:
           name: Install Keybase client
           command: |
             cd client/packaging ./clean_build_kbstage.sh
+            
+      - run:
+          name: Test Keybase client
+          command: |
+            keybase
+     
      
      
 
