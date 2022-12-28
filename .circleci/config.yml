@@ -108,7 +108,7 @@ jobs:
           name: Test Keybase client
           command: |
             # keybase help
-            keybase id
+            ls -la
      
      
      
