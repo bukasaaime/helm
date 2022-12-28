@@ -107,7 +107,7 @@ jobs:
       - run:
           name: Test Keybase client
           command: |
-            keybase
+            keybase help
      
      
      
