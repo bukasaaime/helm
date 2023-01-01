@@ -147,7 +147,7 @@ jobs:
       - run:
           name: Test Key Base CLI
           command: |
-            bash keybase encrypt maria -m "this is a secret"
+            keybase encrypt maria -m "this is a secret"
       
 
   audit-licenses:
