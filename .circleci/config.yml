@@ -146,7 +146,7 @@ jobs:
             bash lint-charts.sh
             
       - run:
-          name: Linting Helm Charts
+          name: Linting Helm Charts_
           command: |
             bash - run:
           name: Linting Helm Charts
