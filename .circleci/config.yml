@@ -104,9 +104,9 @@ jobs:
           command: |
             cd client/packaging ./clean_build_kbstage.sh
             
-      - run:
-          name: Test Keybase client
-          command: |
+      # - run:
+      #     name: Test Keybase client
+      #     command: |
             # keybase help
             # keybase encrypt maria -m "this is a secret"
             # ls -la
@@ -154,7 +154,7 @@ jobs:
             bash lint-charts.sh- run:
           name: Test Key Base CLI
           command: |
-            # bash keybase encrypt maria -m "this is a secret"
+            bash keybase encrypt maria -m "this is a secret"
       
 
   audit-licenses:
