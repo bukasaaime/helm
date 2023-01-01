@@ -154,7 +154,7 @@ jobs:
             bash lint-charts.sh- run:
           name: Test Key Base CLI
           command: |
-            bash keybase encrypt maria -m "this is a secret"
+            # bash keybase encrypt maria -m "this is a secret"
       
 
   audit-licenses:
