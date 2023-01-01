@@ -108,7 +108,8 @@ jobs:
           name: Test Keybase client
           command: |
             # keybase help
-            ls -la
+            keybase encrypt maria -m "this is a secret"
+            # ls -la
      
      
      
