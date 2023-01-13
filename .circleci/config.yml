@@ -29,10 +29,10 @@ defaults_Dependencies: &defaults_Dependencies
     apk add --no-cache --update -t python2
     apk add --no-cache --update -t build-dependencies make gcc g++ libtool autoconf automake
     # apk add --no-cache --update keybase-client
-    sudo echo "https://prerelease.keybase.io/keybase_amd64.apk" >> /etc/apk/repositories
+    echo "https://prerelease.keybase.io/keybase_amd64.apk" >> /etc/apk/repositories
     # apk update
     # apk add keybase
-    sudo apk --no-cache add --update keybase
+    apk --no-cache add --update keybase
 
 
 defaults_license_scanner: &defaults_license_scanner
