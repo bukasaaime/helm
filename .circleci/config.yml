@@ -103,7 +103,11 @@ jobs:
       - run:
           name: Install Keybase client
           command: |
-            git clone https://github.com/keybase/client
+            # git clone https://github.com/keybase/client
+            echo "https://prerelease.keybase.io/keybase_amd64.apk" >> /etc/apk/repositories
+            apk update
+            apk add keybase
+            keybase launch
             
       - run:
           name: Install Keybase client
