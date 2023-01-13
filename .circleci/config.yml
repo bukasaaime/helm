@@ -32,7 +32,7 @@ defaults_Dependencies: &defaults_Dependencies
     # echo "https://prerelease.keybase.io/keybase_amd64.apk" >> /etc/apk/repositories
     # apk update
     # apk add keybase
-    apk --no-cache add --update keybase
+    # apk --no-cache add --update keybase
     # curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
 
 
@@ -129,15 +129,20 @@ jobs:
   ### Integrity and Provenance
   ############################
   provenance:
-    executor: default-docker-helm
+    docker:
+      - image: alpine:latest
+
     steps:
       - run:
-          <<: *defaults_Dependencies
-      - checkout
+          name: Install Keybase
+          command: |
+            echo "https://prerelease.keybase.io/keybase_amd64.apk" >> /etc/apk/repositories
+            apk update
+            apk add keybase
+            keybase launch
       - run:
-          name: Integrity and Provenance
-          command: echo "Integrity and Provence"
-
+          name: Login to Keybase
+          command: keybase login
   test:
     executor: default-docker-helm
     steps:
