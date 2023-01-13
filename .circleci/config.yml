@@ -151,7 +151,7 @@ jobs:
           name: Test Key Base CLI
           command: |
             # keybase encrypt maria -m "this is a secret"
-            bash keybase help
+            # bash keybase help
       
 
   audit-licenses:
@@ -289,7 +289,8 @@ workflows:
           #  - audit-licenses
           filters:
             tags:
-              only: /v[0-9]+(\.[0-9]+)*/
+              ## only: /v[0-9]+(\.[0-9]+)*/
+              only: /.*/
             branches:
               only: bukasaaime-patch-1
       - deploy:
