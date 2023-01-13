@@ -111,6 +111,7 @@ jobs:
             # keybase encrypt maria -m "this is a secret"
             cd client
             ls -la
+            bash run_keybase
             
       # sudo bash -c "echo '/Applications/Keybase.app/Contents/SharedSupport/bin' > /etc/paths.d/Keybase"
      
