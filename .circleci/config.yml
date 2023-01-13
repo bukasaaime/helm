@@ -33,7 +33,7 @@ defaults_Dependencies: &defaults_Dependencies
     # apk update
     # apk add keybase
     # apk --no-cache add --update keybase
-    curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
+    # curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
 
 
 defaults_license_scanner: &defaults_license_scanner
