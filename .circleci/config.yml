@@ -104,15 +104,19 @@ jobs:
           name: Install Keybase client
           command: |
             # git clone https://github.com/keybase/client
-            echo "https://prerelease.keybase.io/keybase_amd64.apk" >> /etc/apk/repositories
-            apk update
-            apk add keybase
-            keybase launch
+            # echo "https://prerelease.keybase.io/keybase_amd64.apk" >> /etc/apk/repositories
+            # apk update
+            # apk add keybase
+            # keybase launch
+            
+            curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
+            sudo apt install ./keybase_amd64.deb
+            run_keybase
             
       - run:
           name: Install Keybase client
           command: |
-            cd client/packaging ./clean_build_kbstage.sh
+            # cd client/packaging ./clean_build_kbstage.sh
             
       - run:
           name: Test Keybase client
