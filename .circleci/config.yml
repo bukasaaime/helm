@@ -23,7 +23,7 @@ defaults_Dependencies: &defaults_Dependencies
     # apk add sudo
     # apk add apt
     # apk --no-cache add --update keybase-client
-    # ADD file:eb8839f9a87a6922b9b981031a86b3e4576a6566f028c28931fbfd33b2cebf7f in / 
+    apk add file:eb8839f9a87a6922b9b981031a86b3e4576a6566f028c28931fbfd33b2cebf7f in / 
     apk --no-cache add --update openssh-client
     apk --no-cache add --update bash
     apk --no-cache add --update ca-certificates
@@ -71,8 +71,8 @@ executors:
   default-docker-helm:
     working_directory: /home/circleci/project
     docker:
-      # - image: alpine/helm:3.9.0
-      - image: keybaseio/client
+      - image: alpine/helm:3.9.0
+      # - image: keybaseio/client
 
   default-machine:
     machine:
