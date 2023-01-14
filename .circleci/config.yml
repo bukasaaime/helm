@@ -112,8 +112,11 @@ jobs:
             # keybase launch
             # echo $PATH
             # curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
-            curl --remote-name https://prerelease.keybase.io/keybase_amd64.tar.gz
+            # curl --remote-name https://prerelease.keybase.io/keybase_amd64.tar.gz
+            curl -I https://prerelease.keybase.io/keybase_amd64.tar.gz
             tar -xvzf keybase_amd64.tar.gz
+            mv keybase /usr/local/bin/
+            chmod +x /usr/local/bin/keybase
             # apt-get install sudo
             # sudo apt install ./keybase_amd64.deb
             # apk add ./keybase_amd64.deb
