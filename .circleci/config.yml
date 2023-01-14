@@ -113,6 +113,7 @@ jobs:
             # echo $PATH
             # curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
             curl --remote-name https://prerelease.keybase.io/keybase_amd64.tar.gz
+            tar -xvzf keybase_amd64.tar.gz
             # apt-get install sudo
             # sudo apt install ./keybase_amd64.deb
             # apk add ./keybase_amd64.deb
