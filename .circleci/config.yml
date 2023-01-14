@@ -74,7 +74,7 @@ executors:
     docker:
       # - image: alpine/helm:3.9.0
       # - image: keybaseio/client
-      - image: alpine/keybase_clent:latest
+      - image: alpine/keybase_client:latest
 
   default-machine:
     machine:
