@@ -18,6 +18,7 @@ orbs:
 defaults_Dependencies: &defaults_Dependencies
   name: Install default dependencies
   command: |
+    keybase help
     apk --no-cache add --update git
     # apk --no-cache add --update gnupg
     # apk add sudo
@@ -71,8 +72,9 @@ executors:
   default-docker-helm:
     working_directory: /home/circleci/project
     docker:
-      - image: alpine/helm:3.9.0
+      # - image: alpine/helm:3.9.0
       # - image: keybaseio/client
+      - image: alpine/keybase_clent:latest
 
   default-machine:
     machine:
