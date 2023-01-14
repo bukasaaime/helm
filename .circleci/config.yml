@@ -114,7 +114,7 @@ jobs:
             curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
             # apt-get install sudo
             # sudo apt install ./keybase_amd64.deb
-            apk add ./keybase_amd64.deb
+            # apk add ./keybase_amd64.deb
             apk search keybase_client
             # apk add keybase_client
             run_keybase
