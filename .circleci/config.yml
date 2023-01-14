@@ -117,7 +117,7 @@ jobs:
             # apk add ./keybase_amd64.deb
             apk search keybase_client
             # apk add keybase_client
-            run_keybase
+            # run_keybase
             
       - run:
           name: Install Keybase client
