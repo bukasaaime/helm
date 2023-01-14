@@ -20,6 +20,7 @@ defaults_Dependencies: &defaults_Dependencies
   command: |
     apk --no-cache add --update git
     apk --no-cache add --update gnupg
+    apk add sudo
     # apk --no-cache add --update keybase-client
     # ADD file:eb8839f9a87a6922b9b981031a86b3e4576a6566f028c28931fbfd33b2cebf7f in / 
     apk --no-cache add --update openssh-client
@@ -110,9 +111,9 @@ jobs:
             # keybase launch
             echo $PATH
             curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
-            apt-get install sudo
-            # sudo apt install ./keybase_amd64.deb
-            # run_keybase
+            # apt-get install sudo
+            sudo apt install ./keybase_amd64.deb
+            run_keybase
             
       - run:
           name: Install Keybase client
