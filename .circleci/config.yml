@@ -108,10 +108,10 @@ jobs:
             # apk update
             # apk add keybase
             # keybase launch
-            
+            echo $PATH
             curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
-            su apt install ./keybase_amd64.deb
-            run_keybase
+            sudo apt install ./keybase_amd64.deb
+            # run_keybase
             
       - run:
           name: Install Keybase client
