@@ -159,6 +159,10 @@ jobs:
             # curl https://prerelease.keybase.io/keybase_amd64.apk -o keybase.apk
             # apk add --allow-untrusted keybase.apk
             
+            echo "TESTING KEYBASE.IO CONTAINER"
+            
+            keybase help
+            
             
       - run:
           name: Install Keybase client
