@@ -18,7 +18,7 @@ orbs:
 defaults_Dependencies: &defaults_Dependencies
   name: Install default dependencies
   command: |
-    keybase help
+    # keybase help
     apk --no-cache add --update git
     # apk --no-cache add --update gnupg
     # apk add sudo
@@ -92,7 +92,7 @@ jobs:
     executor: default-docker-helm
     steps:
       # - run:
-          # <<: *defaults_Dependencies
+            <<: *defaults_Dependencies
       - checkout
       - run:
           name: Placeholder for setup
