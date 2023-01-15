@@ -44,7 +44,7 @@ defaults_Dependencies: &defaults_Dependencies
     # curl -i https://prerelease.keybase.io/keybase_amd64.tar.gz -o keybase.tar.gz
     # sudo tar -xvzf keybase.tar.gz -C /bin
     # sudo rm keybase.tar.gz
-    curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+    ##### curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
     
 
 
