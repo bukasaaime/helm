@@ -226,7 +226,7 @@ jobs:
             keybase help
             # sudo -u bukasaaime keybase id bukasaaime
             keybase help
-            gpg help
+            gpg --help
      
           
       - run:
