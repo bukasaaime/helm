@@ -230,7 +230,7 @@ jobs:
             echo "========================"
             echo "    TEST CRYPTO - GPG"
             echo "========================"
-            gpg --help
+            # gpg --help
             
             gpg --list-secret-keys
      
