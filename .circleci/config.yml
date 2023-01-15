@@ -121,7 +121,7 @@ jobs:
             echo "SETTING UP HELM ... "
             echo ""
             # echo "TESTING KEYBASE INSTALLATION ... WITH COMMAND KEYBASE HELP"
-            # echo ""curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | sh
+            curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | sh
             
             
             #### curl https://prerelease.keybase.io/keybase_amd64.tar.gz -o keybase.tar.gz
