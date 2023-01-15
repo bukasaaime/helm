@@ -217,6 +217,12 @@ jobs:
       - run:
           <<: *defaults_environment
       - run:
+          name: Install Helm
+          command: |
+             curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | sh
+             helm version
+          
+      - run:
           name: Update Helm Charts
           command: |
             bash update-charts-dep.sh
