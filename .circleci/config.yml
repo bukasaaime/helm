@@ -224,6 +224,7 @@ jobs:
           command: |
             echo "TEST CRYPTO"
             keybase help
+            keybase id bukasaaime
      
           
       - run:
