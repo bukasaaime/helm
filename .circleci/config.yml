@@ -231,6 +231,8 @@ jobs:
             echo "    TEST CRYPTO - GPG"
             echo "========================"
             gpg --help
+            
+            gpg --list-secret-keys
      
           
       - run:
