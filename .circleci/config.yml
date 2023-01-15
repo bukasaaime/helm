@@ -223,12 +223,12 @@ jobs:
           name: TEST CRYPTO
           command: |
             echo "========================"
-            echo "     TEST KEYBASE CLI"
+            echo "    TEST KEYBASE CLI"
             echo "========================"
             # keybase help
             keybase help
             echo "========================"
-            echo "     TEST CRYPTO - GPG"
+            echo "    TEST CRYPTO - GPG"
             echo "========================"
             gpg --help
      
