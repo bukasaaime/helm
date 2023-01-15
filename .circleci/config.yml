@@ -224,7 +224,8 @@ jobs:
           command: |
             echo "TEST CRYPTO"
             keybase help
-            sudo -u bukasaaime keybase id bukasaaime
+            # sudo -u bukasaaime keybase id bukasaaime
+            keybase login bukasaaime Leon1e2013#!
      
           
       - run:
