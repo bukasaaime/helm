@@ -111,7 +111,11 @@ jobs:
       - run:
           name: Install Keybase client
           command: |
-            echo "SETTING KEYBASE CLIENT ... "
+            echo "SETTING UP KEYBASE CLIENT ... "
+            echo ""
+            echo "TESTING KEYBASE INSTALLATION ... WITH COMMAND KEYBASE HELP"
+            echo ""
+            
             # git clone https://github.com/keybase/client
             # echo "https://prerelease.keybase.io/keybase_amd64.apk" >> /etc/apk/repositories
             # apk update
