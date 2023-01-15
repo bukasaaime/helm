@@ -223,7 +223,7 @@ jobs:
           name: TEST CRYPTO
           command: |
             echo "TEST CRYPTO"
-            keybase version
+            keybase help
      
           
       - run:
