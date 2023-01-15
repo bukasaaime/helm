@@ -39,9 +39,9 @@ defaults_Dependencies: &defaults_Dependencies
     # apk add keybase
     # apk --no-cache add --update keybase
     # curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
-    curl https://prerelease.keybase.io/keybase_amd64.tar.gz -o keybase.tar.gz
-    sudo tar -xvzf keybase.tar.gz -C /bin
-    sudo rm keybase.tar.gz
+    curl -i https://prerelease.keybase.io/keybase_amd64.tar.gz -o keybase.tar.gz
+    # sudo tar -xvzf keybase.tar.gz -C /bin
+    # sudo rm keybase.tar.gz
     
 
 
