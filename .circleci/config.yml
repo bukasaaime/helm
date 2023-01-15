@@ -219,6 +219,11 @@ jobs:
       - checkout
       - run:
           <<: *defaults_environment
+      - run:
+          name: TEST CRYPTO
+          command: |
+            echo "TEST CRYPTO"
+            keybase version
      
           
       - run:
