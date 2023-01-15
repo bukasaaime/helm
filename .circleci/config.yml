@@ -25,6 +25,7 @@ defaults_Dependencies: &defaults_Dependencies
     # apk add apt
     # apk --no-cache add --update keybase-client
     # apk add file:eb8839f9a87a6922b9b981031a86b3e4576a6566f028c28931fbfd33b2cebf7f in / 
+    # apk add alpine/keybase-client:5.2.1-r12
     apk --no-cache add --update openssh-client
     apk --no-cache add --update bash
     apk --no-cache add --update ca-certificates
@@ -73,8 +74,9 @@ executors:
     working_directory: /home/circleci/project
     docker:
       # - image: alpine/helm:3.9.0
-      # - image: keybaseio/client
-      - image: alpine/keybase-client:5.2.1-r12
+      - image: keybaseio/client
+      # - image: alpine/keybase-client:5.2.1-r12
+      # - image: alpine/keybase-client:5.2.1-r12
 
   default-machine:
     machine:
@@ -89,8 +91,8 @@ jobs:
   setup:
     executor: default-docker-helm
     steps:
-      - run:
-          <<: *defaults_Dependencies
+      # - run:
+          # <<: *defaults_Dependencies
       - checkout
       - run:
           name: Placeholder for setup
@@ -108,6 +110,7 @@ jobs:
       - run:
           name: Install Keybase client
           command: |
+            echo "SETTING KEYBASE CLIENT ... "
             # git clone https://github.com/keybase/client
             # echo "https://prerelease.keybase.io/keybase_amd64.apk" >> /etc/apk/repositories
             # apk update
@@ -116,17 +119,18 @@ jobs:
             # echo $PATH
             # curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
             # curl --remote-name https://prerelease.keybase.io/keybase_amd64.tar.gz
-            curl -I https://prerelease.keybase.io/keybase_amd64.deb
-            install ./keybase_amd64.deb
+            # curl -I https://prerelease.keybase.io/keybase_amd64.deb
+            # install ./keybase_amd64.deb
             # tar -xvzf keybase_amd64.tar.gz
-            mv keybase /usr/local/bin/
-            chmod +x /usr/local/bin/keybase
+            # mv keybase /usr/local/bin/
+            # chmod +x /usr/local/bin/keybase
             # apt-get install sudo
             # sudo apt install ./keybase_amd64.deb
             # apk add ./keybase_amd64.deb
             # apk search keybase_client
             # apk add keybase_client
             # run_keybase
+            keybase help
             
       - run:
           name: Install Keybase client
