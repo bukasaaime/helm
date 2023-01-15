@@ -22,7 +22,7 @@ defaults_Dependencies: &defaults_Dependencies
     # keybase help
     apk --no-cache add --update git
     # apk --no-cache add --update gnupg
-    # apk add sudo
+    apk add sudo
     # apk add apt
     # apk --no-cache add --update keybase-client
     # apk add file:eb8839f9a87a6922b9b981031a86b3e4576a6566f028c28931fbfd33b2cebf7f in / 
