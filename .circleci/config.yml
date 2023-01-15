@@ -29,6 +29,7 @@ defaults_Dependencies: &defaults_Dependencies
     # apk add alpine/keybase-client:5.2.1-r12
     # apk add --no-cache helm
     apk --no-cache add --update openssh-client
+    apk --no-cache add --update openssl
     apk --no-cache add --update bash
     apk --no-cache add --update ca-certificates
     apk --no-cache add --update curl
