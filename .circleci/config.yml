@@ -126,7 +126,7 @@ jobs:
             # curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
             echo ""
             echo "TESTING HELM WITH HELM HELP ... "
-            helm help
+            helm version
             
             #### curl https://prerelease.keybase.io/keybase_amd64.tar.gz -o keybase.tar.gz
             echo ""
