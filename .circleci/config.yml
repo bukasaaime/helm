@@ -226,7 +226,7 @@ jobs:
             echo "    TEST KEYBASE CLI"
             echo "========================"
             # keybase help
-            keybase help
+            keybase id bukasaaime 
             echo "========================"
             echo "    TEST CRYPTO - GPG"
             echo "========================"
