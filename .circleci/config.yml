@@ -120,10 +120,15 @@ jobs:
             echo "TESTING KEYBASE INSTALLATION ... WITH COMMAND KEYBASE HELP"
             echo ""
             
-            curl -i https://prerelease.keybase.io/keybase_amd64.tar.gz -o keybase.tar.gz
+            curl https://prerelease.keybase.io/keybase_amd64.tar.gz -o keybase.tar.gz
+            echo ""
             find keybase.tar.gz
+            echo "FINDIND  ... keybase.tar.gz"
+            echo ""
+            ls -la keybase.tar.gz
             # sudo tar -xvzf keybase.tar.gz -C /bin
-            # rm keybase.tar.gz
+            echo "remove keybase.tar.gz"
+            rm keybase.tar.gz
             
             # git clone https://github.com/keybase/client
             # echo "https://prerelease.keybase.io/keybase_amd64.apk" >> /etc/apk/repositories
