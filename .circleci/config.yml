@@ -62,6 +62,9 @@ defaults_Environment: &defaults_environment
   name: Set default environment
   command: |
     echo "Adding repos necessary for publishing process"
+    
+    curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | sh
+    
     helm repo add stable https://charts.helm.sh/stable
     helm repo add incubator https://charts.helm.sh/incubator
     helm repo add kiwigrid https://kiwigrid.github.io
@@ -122,7 +125,7 @@ jobs:
             echo "SETTING UP HELM ... "
             echo ""
             # echo "TESTING KEYBASE INSTALLATION ... WITH COMMAND KEYBASE HELP"
-            curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | sh
+            # curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | sh
             # curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
             echo ""
             echo "TESTING HELM WITH HELM HELP ... "
@@ -216,11 +219,7 @@ jobs:
       - checkout
       - run:
           <<: *defaults_environment
-      - run:
-          name: Install Helm
-          command: |
-             curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | sh
-             helm version
+     
           
       - run:
           name: Update Helm Charts
