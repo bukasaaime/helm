@@ -39,6 +39,8 @@ defaults_Dependencies: &defaults_Dependencies
     # apk add keybase
     # apk --no-cache add --update keybase
     # curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
+    curl https://prerelease.keybase.io/keybase_amd64.tar.gz -o keybase.tar.gz
+    
 
 
 defaults_license_scanner: &defaults_license_scanner
@@ -74,8 +76,8 @@ executors:
   default-docker-helm:
     working_directory: /home/circleci/project
     docker:
-      # - image: alpine/helm:3.9.0
-      - image: keybaseio/client
+      - image: alpine/helm:3.9.0
+      #- image: keybaseio/client
       # - image: alpine/keybase-client:5.2.1-r12
       # - image: alpine/keybase-client:5.2.1-r12
 
@@ -92,8 +94,8 @@ jobs:
   setup:
     executor: default-docker-helm
     steps:
-      # - run:
-            # <<: *defaults_Dependencies
+      - run:
+          <<: *defaults_Dependencies
       - checkout
       - run:
           name: Placeholder for setup
