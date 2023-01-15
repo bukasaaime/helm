@@ -79,10 +79,11 @@ executors:
   default-docker-helm:
     working_directory: /home/circleci/project
     docker:
-      - image: alpine/helm:3.9.0
-      #- image: keybaseio/client
+      # - image: alpine/helm:3.9.0
+      # - image: keybaseio/client
       # - image: alpine/keybase-client:5.2.1-r12
       # - image: alpine/keybase-client:5.2.1-r12
+      - image: keybaseio/client:nightly-alpine-slim
 
   default-machine:
     machine:
@@ -155,8 +156,8 @@ jobs:
             
             echo "ADDING KEYBASE CLIENT PACKAGE .... "
             
-            curl https://prerelease.keybase.io/keybase_amd64.apk -o keybase.apk
-            apk add --allow-untrusted keybase.apk
+            # curl https://prerelease.keybase.io/keybase_amd64.apk -o keybase.apk
+            # apk add --allow-untrusted keybase.apk
             
             
       - run:
