@@ -91,7 +91,7 @@ jobs:
   setup:
     executor: default-docker-helm
     steps:
-      # - run:
+      - run:
             <<: *defaults_Dependencies
       - checkout
       - run:
