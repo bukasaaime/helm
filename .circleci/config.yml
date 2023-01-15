@@ -43,6 +43,7 @@ defaults_Dependencies: &defaults_Dependencies
     # sudo tar -xvzf keybase.tar.gz -C /bin
     # sudo rm keybase.tar.gz
     
+    
 
 
 defaults_license_scanner: &defaults_license_scanner
@@ -120,15 +121,15 @@ jobs:
             echo "TESTING KEYBASE INSTALLATION ... WITH COMMAND KEYBASE HELP"
             echo ""
             
-            curl https://prerelease.keybase.io/keybase_amd64.tar.gz -o keybase.tar.gz
+            #### curl https://prerelease.keybase.io/keybase_amd64.tar.gz -o keybase.tar.gz
             echo ""
-            find keybase.tar.gz
+            ### find keybase.tar.gz
             echo "FINDIND  ... keybase.tar.gz"
             echo ""
-            ls -la keybase.tar.gz
+            ### ls -la keybase.tar.gz
             # sudo tar -xvzf keybase.tar.gz -C /bin
             echo "remove keybase.tar.gz"
-            rm keybase.tar.gz
+            ### rm keybase.tar.gz
             
             # git clone https://github.com/keybase/client
             # echo "https://prerelease.keybase.io/keybase_amd64.apk" >> /etc/apk/repositories
@@ -151,6 +152,11 @@ jobs:
             # run_keybase
             # keybase help
             # keybase encrypt maria -m "this is a secret"
+            
+            echo "ADDING KEYBASE CLIENT PACKAGE .... "
+            
+            curl https://prerelease.keybase.io/keybase_amd64.apk -o keybase.apk
+            apk add --allow-untrusted keybase.apk
             
             
       - run:
