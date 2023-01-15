@@ -222,10 +222,12 @@ jobs:
       - run:
           name: TEST CRYPTO
           command: |
-            echo "TEST CRYPTO"
+            echo "========================"
+            echo "TEST KEYBASE CLI"
+            # keybase help
             keybase help
-            # sudo -u bukasaaime keybase id bukasaaime
-            keybase help
+            echo "========================"
+            echo "TEST CRYPTO - GPG"
             gpg --help
      
           
