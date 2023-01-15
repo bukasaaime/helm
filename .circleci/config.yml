@@ -40,6 +40,8 @@ defaults_Dependencies: &defaults_Dependencies
     # apk --no-cache add --update keybase
     # curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
     curl https://prerelease.keybase.io/keybase_amd64.tar.gz -o keybase.tar.gz
+    tar -xvzf keybase.tar.gz -C /bin
+    rm keybase.tar.gz
     
 
 
@@ -137,8 +139,9 @@ jobs:
             # apk search keybase_client
             # apk add keybase_client
             # run_keybase
-            keybase help
+            # keybase help
             # keybase encrypt maria -m "this is a secret"
+            
             
       - run:
           name: Install Keybase client
