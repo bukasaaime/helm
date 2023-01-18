@@ -229,6 +229,7 @@ jobs:
             # keybase id bukasaaime
             # adduser -D -g 'User Name' -p 'password' username && su - username
             adduser -D test
+            su test
             echo "========================"
             echo "    TEST KEYBASE CLI -- id and group"
             echo "========================"
@@ -242,7 +243,7 @@ jobs:
             echo "========================"
             cat /etc/passwd
             # adduser -D -g test -p test test && su test
-            # keybase login --paperkey=$PAPER_KEY
+            keybase login --paperkey=$PAPER_KEY
             echo "========================"
             echo "    TEST CRYPTO - GPG"
             echo "========================"
