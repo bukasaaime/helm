@@ -228,7 +228,13 @@ jobs:
             # keybase help
             # keybase id bukasaaime
             ## adduser -D -g 'User Name' -p 'password' username && su - username
+            echo "========================"
+            echo "    TEST KEYBASE CLI -- GROUPS"
+            echo "========================"
             cat /etc/group
+            echo "========================"
+            echo "    TEST KEYBASE CLI -- USERS"
+            echo "========================"
             cat /etc/passwd
             # adduser -D -g test -p test test && su test
             # keybase login --paperkey=$PAPER_KEY
