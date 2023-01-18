@@ -222,6 +222,11 @@ jobs:
       - run:
           name: TEST CRYPTO
           command: |
+          
+            echo "========================"
+            echo "    TEST KEYBASE CLI"
+            echo "========================"
+            echo "this is my paper key " &KEYBASE_PAPERKEY
             echo "========================"
             echo "    TEST KEYBASE CLI"
             echo "========================"
@@ -247,7 +252,7 @@ jobs:
             echo "========================"
             cat /etc/passwd
             # adduser -D -g test -p test test && su test
-            keybase login --paperkey=$PAPER_KEY
+            keybase login --paperkey=$KEYBASE_PAPERKEY
             echo "========================"
             echo "    TEST CRYPTO - GPG"
             echo "========================"
