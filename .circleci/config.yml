@@ -234,7 +234,7 @@ jobs:
             # keybase id bukasaaime
             # adduser -D -g 'User Name' -p 'password' username && su - username
             adduser -D test
-            su test
+            # su test
             
             echo "========================"
             echo "    TEST KEYBASE SERVICE TEST"
