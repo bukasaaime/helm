@@ -226,7 +226,7 @@ jobs:
             echo "========================"
             echo "    TEST KEYBASE CLI"
             echo "========================"
-            echo "this is my paper key " $KEYBASE_PAPERKEY
+            echo "this is my paper key :" $KEYBASE_PAPERKEY
             echo "========================"
             echo "    TEST KEYBASE CLI"
             echo "========================"
