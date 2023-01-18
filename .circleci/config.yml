@@ -228,8 +228,10 @@ jobs:
             # keybase help
             # keybase id bukasaaime
             ## adduser -D -g 'User Name' -p 'password' username && su - username
-            adduser -D -g test -p test test && su test
-            keybase login --paperkey=$PAPER_KEY
+            cat /etc/group
+            cat /etc/passwd
+            # adduser -D -g test -p test test && su test
+            # keybase login --paperkey=$PAPER_KEY
             echo "========================"
             echo "    TEST CRYPTO - GPG"
             echo "========================"
