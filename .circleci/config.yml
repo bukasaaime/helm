@@ -228,7 +228,7 @@ jobs:
             # keybase help
             # keybase id bukasaaime
             # adduser -D -g 'User Name' -p 'password' username && su - username
-            adduser -D -g test
+            adduser -D test
             echo "========================"
             echo "    TEST KEYBASE CLI -- id and group"
             echo "========================"
