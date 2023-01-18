@@ -231,6 +231,10 @@ jobs:
             adduser -D test
             su test
             echo "========================"
+            echo "    TEST KEYBASE SERVICE TEST"
+            echo "========================"
+            keybase service start
+            echo "========================"
             echo "    TEST KEYBASE CLI -- id and group"
             echo "========================"
             id
