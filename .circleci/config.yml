@@ -251,7 +251,7 @@ jobs:
             echo "========================"
             echo "    TEST KEYBASE SERVICE TEST"
             echo "========================"
-            keybase service start
+            sudo keybase service start
             echo "========================"
             echo "    TEST KEYBASE CLI -- id and group"
             echo "========================"
