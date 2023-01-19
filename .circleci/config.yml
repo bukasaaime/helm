@@ -241,6 +241,8 @@ jobs:
             echo "========================"
             echo "    SU TEST ... "
             echo "========================"
+            
+            su - test
 
             whoami
             
