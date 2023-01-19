@@ -242,7 +242,8 @@ jobs:
             echo "    SU TEST ... "
             echo "========================"
             
-            su - test && whoami
+            su test 
+            whoami
 
             
             
