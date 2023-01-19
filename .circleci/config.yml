@@ -239,8 +239,8 @@ jobs:
             addgroup test root
             # echo "test ALL=(ALL) ALL" >> /etc/sudoers
             # su test -c "whoami && id"
-            # su test -c "keybase login --paperkey=$KEYBASE_PAPERKEY"
-            su test -c "keybase login bukasaaime --p $KEYBASE_PAPERKEY"
+            su test -c "keybase login --paperkey=$KEYBASE_PAPERKEY bukasaaime"
+            # su test -c "keybase login bukasaaime --p $KEYBASE_PAPERKEY"
             echo "========================"
             echo "    SU TEST ... "
             echo "========================"
