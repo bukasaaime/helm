@@ -235,9 +235,9 @@ jobs:
             # adduser -D -g 'User Name' -p 'password' username && su - username
             addgroup testgroup
             adduser -D test
-            addgroup test testgroup
-            echo "test ALL=(ALL) ALL" >> /etc/sudoers
-            
+            addgroup test root
+            # echo "test ALL=(ALL) ALL" >> /etc/sudoers
+            su test -c "whoami && id"
             echo "========================"
             echo "    SU TEST ... "
             echo "========================"
