@@ -237,6 +237,10 @@ jobs:
             adduser -D test
             addgroup test testgroup
             echo "test ALL=(ALL) ALL" >> /etc/sudoers
+            
+            echo "========================"
+            echo "    SU TEST ... "
+            echo "========================"
 
             su test
             
