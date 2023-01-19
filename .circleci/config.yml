@@ -242,9 +242,9 @@ jobs:
             echo "    SU TEST ... "
             echo "========================"
             
-            su - test
+            su - test && whoami
 
-            whoami
+            
             
             echo "========================"
             echo "    TEST KEYBASE SERVICE TEST"
