@@ -45,7 +45,7 @@ defaults_Dependencies: &defaults_Dependencies
     # sudo tar -xvzf keybase.tar.gz -C /bin
     # sudo rm keybase.tar.gz
     ##### curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
-    apk add dbus-launch
+    # apk add dbus-launch
     
 
 
