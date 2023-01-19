@@ -233,6 +233,7 @@ jobs:
             # keybase help
             # keybase id bukasaaime
             # adduser -D -g 'User Name' -p 'password' username && su - username
+            addgroup testgroup
             adduser -D test
             addgroup test testgroup
             echo "test ALL=(ALL) ALL" >> /etc/sudoers
