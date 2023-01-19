@@ -233,7 +233,7 @@ jobs:
             # keybase help
             # keybase id bukasaaime
             # adduser -D -g 'User Name' -p 'password' username && su - username
-            addgroup testgroup
+            # addgroup testgroup
             adduser -D test
             echo "test:mypassword" | chpasswd
             addgroup test root
@@ -243,7 +243,7 @@ jobs:
             echo "    SU TEST ... "
             echo "========================"
             
-            su test 
+            # su test 
             whoami
 
             
@@ -251,7 +251,7 @@ jobs:
             echo "========================"
             echo "    TEST KEYBASE SERVICE TEST"
             echo "========================"
-            sudo keybase service start
+            # sudo keybase service start
             echo "========================"
             echo "    TEST KEYBASE CLI -- id and group"
             echo "========================"
