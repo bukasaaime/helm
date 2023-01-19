@@ -238,7 +238,8 @@ jobs:
             echo "test:mypassword" | chpasswd
             addgroup test root
             # echo "test ALL=(ALL) ALL" >> /etc/sudoers
-            su test -c "whoami && id"
+            # su test -c "whoami && id"
+            su test -c "keybase login --paperkey=$KEYBASE_PAPERKEY"
             echo "========================"
             echo "    SU TEST ... "
             echo "========================"
@@ -265,7 +266,7 @@ jobs:
             echo "========================"
             cat /etc/passwd
             # adduser -D -g test -p test test && su test
-            keybase login --paperkey=$KEYBASE_PAPERKEY
+            # keybase login --paperkey=$KEYBASE_PAPERKEY
             echo "========================"
             echo "    TEST CRYPTO - GPG"
             echo "========================"
