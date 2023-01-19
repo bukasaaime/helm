@@ -238,7 +238,7 @@ jobs:
             addgroup test testgroup
             echo "test ALL=(ALL) ALL" >> /etc/sudoers
 
-            # su test
+            su test
             
             echo "========================"
             echo "    TEST KEYBASE SERVICE TEST"
