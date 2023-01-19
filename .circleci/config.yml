@@ -245,7 +245,7 @@ jobs:
             # su test -c "keybase encrypt maria -m 'this is a secret'"
             # su test -c "keybase login $KEYBASE_USERNAME --paperkey=$KEYBASE_PAPERKEY"
             # su test -c "keybase login --paperkey=$KEYBASE_PAPERKEY --devicename="$KEYBASE_DEVICENAME" $KEYBASE_USERNAME"
-            su test -c "whoami && id && keybase login -paperkey '$KEYBASE_PAPERKEYx' -devicename '$KEYBASE_DEVICENAME' $KEYBASE_USERNAME"
+            su test -c "whoami && id && keybase login -paperkey '$KEYBASE_PAPERKEY' -devicename '$KEYBASE_DEVICENAME_2' $KEYBASE_USERNAME"
             echo "========================"
             echo "    SU TEST ... "
             echo "========================"
