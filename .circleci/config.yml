@@ -243,7 +243,7 @@ jobs:
             # su test -c "whoami && id"
             # su test -c "keybase login --paperkey=$KEYBASE_PAPERKEY bukasaaime"
             echo "========================"
-            echo "    SU TEST ... "
+            echo "    KEYBASE STATUS ... "
             echo "========================"
             keybase status
             su test -c "keybase login -paperkey '$KEYBASE_PAPERKEY' bukasaaime"
