@@ -275,7 +275,7 @@ jobs:
             
             
             
-            su test -c "keybase login -paperkey '$KEYBASE_PAPERKEY' $KEYBASE_USERNAME_"
+            su test -c "keybase login -paperkey '$KEYBASE_PAPERKEY' $KEYBASE_USERNAME && keybase status"
             #### su test -c "keybase login -paperkey '$KEYBASE_PAPERKEY' bukasaaime"
             # su test -c "keybase encrypt maria -m 'this is a secret'"
             # su test -c "keybase login $KEYBASE_USERNAME --paperkey=$KEYBASE_PAPERKEY"
