@@ -261,6 +261,13 @@ jobs:
             
             su test -c "keybase status"
             
+            echo "========================"
+            echo "   TEST - LIST GPG KEYS ... "
+            echo "========================"
+            
+            su test -c "gpg --list-keys"
+            
+            
             
             su test -c "keybase login -paperkey '$KEYBASE_PAPERKEY' bukasaaime"
             # su test -c "keybase encrypt maria -m 'this is a secret'"
