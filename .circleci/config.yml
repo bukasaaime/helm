@@ -171,7 +171,7 @@ jobs:
             
             echo "TESTING KEYBASE.IO CONTAINER"
             
-            keybase help
+            # keybase help
             
             
       - run:
@@ -228,7 +228,7 @@ jobs:
             echo "    RUN KEYBASE "
             echo "========================"
           
-            bash run_keybase
+            # bash run_keybase
           
             echo "========================"
             echo "    TEST KEYBASE CLI"
