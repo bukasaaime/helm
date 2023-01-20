@@ -242,6 +242,10 @@ jobs:
             # echo "test ALL=(ALL) ALL" >> /etc/sudoers
             # su test -c "whoami && id"
             # su test -c "keybase login --paperkey=$KEYBASE_PAPERKEY bukasaaime"
+            echo "========================"
+            echo "    SU TEST ... "
+            echo "========================"
+            keybase status
             su test -c "keybase login -paperkey '$KEYBASE_PAPERKEY' bukasaaime"
             # su test -c "keybase encrypt maria -m 'this is a secret'"
             # su test -c "keybase login $KEYBASE_USERNAME --paperkey=$KEYBASE_PAPERKEY"
