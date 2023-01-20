@@ -228,7 +228,7 @@ jobs:
             echo "    RUN KEYBASE "
             echo "========================"
           
-            # run_keybase
+            bash run_keybase
           
             echo "========================"
             echo "    TEST KEYBASE CLI"
