@@ -249,6 +249,10 @@ jobs:
             
             gpg --version
             
+            echo "========================"
+            echo "    GPG LIST KEYS ... "
+            echo "========================"
+            
             gpg --list-keys
             
             echo "========================"
