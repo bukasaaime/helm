@@ -248,6 +248,9 @@ jobs:
             echo "========================"
             
             gpg --version
+            
+            gpg --list-keys
+            
             echo "========================"
             echo "    KEYBASE STATUS ... "
             echo "========================"
