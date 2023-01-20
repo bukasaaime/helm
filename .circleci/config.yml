@@ -252,6 +252,8 @@ jobs:
             
             # su test 
             whoami
+            
+            su test -c "whoami && id"
 
             
             
