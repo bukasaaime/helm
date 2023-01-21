@@ -289,14 +289,16 @@ jobs:
             ##### Fails with "Device is already in use if device is already provisionned" . Remove Device from Key Base  ####
             ##### and rerun the TEST.
             ##### KEYBASE_DEVICENAME is random. We give any name.
+            ##### You use a Paper Key to Provision a Device [ computer machine ]
             
+            echo "========================"
+            echo "   MACHINE PROVISIONING AND LOGIN ... "
+            echo "========================"
             
             # su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'MOJALOOP' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'MOJALOOP-TEST000' $KEYBASE_USERNAME"
             
-            echo "========================"
-            echo "   KEYBASE USER LOGIN ... "
-            echo "========================"
-            
+            # su test -c "keybase login --password '$KEYBASE_USER_PASSWORD' $KEYBASE_USERNAME"
             # su test -c "keybase login --password '$KEYBASE_USER_PASSWORD' $KEYBASE_USERNAME"
             
             echo "========================"
