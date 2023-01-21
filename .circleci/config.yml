@@ -283,9 +283,12 @@ jobs:
             
             # su test -c "keybase login $KEYBASE_USERNAME"
             # su test -c "keybase login -u $KEYBASE_USERNAME" -p '$KEYBASE_USERPASSWORD' "
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename '$KEYBASE_DEVICENAME' $KEYBASE_USERNAME && keybase pgp export -s | gpg --import"
+            ###### su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename '$KEYBASE_DEVICENAME' $KEYBASE_USERNAME"
             su test -c "keybase status"
-            keybase pgp export -s | gpg --import
+             echo "========================"
+            echo "   EXPORT IMPORT KEYS ... "
+            echo "========================"
+            su test -c "keybase pgp export -s | gpg --import"
             #### su test -c "keybase login -paperkey '$KEYBASE_PAPERKEY' bukasaaime"
             # su test -c "keybase encrypt maria -m 'this is a secret'"
             # su test -c "keybase login $KEYBASE_USERNAME --paperkey=$KEYBASE_PAPERKEY"
@@ -298,9 +301,9 @@ jobs:
             echo "========================"
             
             # su test 
-            whoami
+            # whoami
             
-            su test -c "whoami && id"
+            # su test -c "whoami && id"
 
             
             
@@ -311,15 +314,15 @@ jobs:
             echo "========================"
             echo "    TEST KEYBASE CLI -- id and group"
             echo "========================"
-            id
+            ######### id
             echo "========================"
             echo "    TEST KEYBASE CLI -- GROUPS"
             echo "========================"
-            cat /etc/group
+            ######## cat /etc/group
             echo "========================"
             echo "    TEST KEYBASE CLI -- USERS"
             echo "========================"
-            cat /etc/passwd
+            ######## cat /etc/passwd
             # adduser -D -g test -p test test && su test
             # keybase login --paperkey=$KEYBASE_PAPERKEY
             echo "========================"
@@ -327,7 +330,7 @@ jobs:
             echo "========================"
             # gpg --help
             
-            gpg --list-secret-keys
+            su test -c 'gpg --list-secret-keys'
      
           
       - run:
@@ -341,7 +344,7 @@ jobs:
       - run:
           name: Test Key Base CLI
           command: |
-            test -c 'keybase encrypt $KEYBASE_USERNAME -m "this is a secret"'
+            # test -c 'keybase encrypt $KEYBASE_USERNAME -m "this is a secret"'
             # bash keybase help
       
 
