@@ -296,7 +296,7 @@ jobs:
             echo "========================"
             
             # su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'MOJALOOP' $KEYBASE_USERNAME"
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'MOJALOOP-TEST000' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'MOJALOOP-TEST000' $KEYBASE_USERNAME && gpg --recv-keys bukasaaime@gmail.com"
             
             # su test -c "keybase login --password '$KEYBASE_USER_PASSWORD' $KEYBASE_USERNAME"
             # su test -c "keybase login --password '$KEYBASE_USER_PASSWORD' $KEYBASE_USERNAME"
