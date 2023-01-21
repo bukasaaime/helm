@@ -340,7 +340,7 @@ jobs:
       - run:
           name: Test Key Base CLI
           command: |
-            ### keybase encrypt maria -m "this is a secret"
+            keybase encrypt $KEYBASE_USERNAME -m "this is a secret"
             # bash keybase help
       
 
