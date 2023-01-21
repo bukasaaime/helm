@@ -288,7 +288,7 @@ jobs:
              echo "========================"
             echo "   EXPORT IMPORT KEYS ... "
             echo "========================"
-            su test -c "keybase pgp export -s | gpg --import"
+            # su test -c "keybase pgp export -s | gpg --import"
             #### su test -c "keybase login -paperkey '$KEYBASE_PAPERKEY' bukasaaime"
             # su test -c "keybase encrypt maria -m 'this is a secret'"
             # su test -c "keybase login $KEYBASE_USERNAME --paperkey=$KEYBASE_PAPERKEY"
