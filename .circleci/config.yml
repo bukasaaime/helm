@@ -294,6 +294,12 @@ jobs:
             # su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'MOJALOOP' $KEYBASE_USERNAME"
             
             echo "========================"
+            echo "   KEYBASE USER LOGIN ... "
+            echo "========================"
+            
+            su test -c "keybase login --password '$KEYBASE_USER_PASSWORD' $KEYBASE_USERNAME"
+            
+            echo "========================"
             echo "   RUN STATUS ... "
             echo "========================"
             su test -c "keybase status"
