@@ -283,11 +283,12 @@ jobs:
             
             # su test -c "keybase login $KEYBASE_USERNAME"
             # su test -c "keybase login -u $KEYBASE_USERNAME" -p '$KEYBASE_USERPASSWORD' "
-            # su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename '$KEYBASE_DEVICENAME' $KEYBASE_USERNAME"
+            # su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY_2' --devicename '$KEYBASE_DEVICENAME' $KEYBASE_USERNAME"
             
             #################################################################################################################
             ##### Fails with "Device is already in use if device is already provisionned" . Remove Device from Key Base  ####
             ##### and rerun the TEST.
+            ##### KEYBASE_DEVICENAME is random. We give any name.
             
             su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'CIRCLECI-TEST' $KEYBASE_USERNAME"
             
