@@ -283,8 +283,9 @@ jobs:
             
             # su test -c "keybase login $KEYBASE_USERNAME"
             # su test -c "keybase login -u $KEYBASE_USERNAME" -p '$KEYBASE_USERPASSWORD' "
-            ####### su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename '$KEYBASE_DEVICENAME' $KEYBASE_USERNAME"
+            ####### su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename '$KEYBASE_DEVICENAME' $KEYBASE_USERNAME && keybase pgp export -s | gpg --import"
             su test -c "keybase status"
+            keybase pgp export -s | gpg --import
             #### su test -c "keybase login -paperkey '$KEYBASE_PAPERKEY' bukasaaime"
             # su test -c "keybase encrypt maria -m 'this is a secret'"
             # su test -c "keybase login $KEYBASE_USERNAME --paperkey=$KEYBASE_PAPERKEY"
