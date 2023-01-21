@@ -290,6 +290,7 @@ jobs:
             ##### and rerun the TEST.
             ##### KEYBASE_DEVICENAME is random. We give any name.
             
+            
             su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'CIRCLECI-TEST' $KEYBASE_USERNAME"
             
             echo "========================"
