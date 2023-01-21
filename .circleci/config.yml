@@ -282,8 +282,8 @@ jobs:
             echo "========================"
             
             # su test -c "keybase login $KEYBASE_USERNAME"
-            su test -c "keybase login -u $KEYBASE_USERNAME" -p '$KEYBASE_USERPASSWORD' "
-           
+            # su test -c "keybase login -u $KEYBASE_USERNAME" -p '$KEYBASE_USERPASSWORD' "
+            su test -c "keybase login -u $KEYBASE_USERNAME -p $KEYBASE_USERPASSWORD "
             # su test -c "keybase login && keybase status"
             #### su test -c "keybase login -paperkey '$KEYBASE_PAPERKEY' bukasaaime"
             # su test -c "keybase encrypt maria -m 'this is a secret'"
