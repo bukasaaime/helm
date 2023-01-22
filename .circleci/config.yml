@@ -297,7 +297,7 @@ jobs:
             
             # su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'MOJALOOP' $KEYBASE_USERNAME"
             # su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M001' $KEYBASE_USERNAME && gpg --recv-keys 0x0120f498c064dba2cd9eb51f2811a06519a53b0b92fde9e5e551613289946691bda40a && keybase status"
-            su test -c "gpg --recv-keys 0x0120f498c064dba2cd9eb51f2811a06519a53b0b92fde9e5e551613289946691bda40a && keybase status"
+            su test -c "gpg --recv-keys 0120f498c064dba2cd9eb51f2811a06519a53b0b92fde9e5e551613289946691bda40a && keybase status"
             # su test -c "keybase login --password '$KEYBASE_USER_PASSWORD' $KEYBASE_USERNAME"
             # su test -c "keybase login --password '$KEYBASE_USER_PASSWORD' $KEYBASE_USERNAME"
             
