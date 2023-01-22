@@ -300,9 +300,9 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "========================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M004' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M005' $KEYBASE_USERNAME"
             
-            su test -c "keybase pgp pull $KEYBASE_USERNAME"
+            # su test -c "keybase pgp pull $KEYBASE_USERNAME"
             
             echo "========================"
             echo "   RUN STATUS ... "
@@ -310,10 +310,12 @@ jobs:
             su test -c "keybase status"
             
             echo "========================"
-            echo "   PULLING THE PUBLIC KEY FROM KEYBASE ... "
+            echo "   PULLING THE PUBLIC KEY FROM KEYBASE [ keybase pgp export | gpg --import ] ... "
             echo "========================"
             
-            su test -c "keybase pgp pull $KEYBASE_USERNAME"
+            # su test -c "keybase pgp pull $KEYBASE_USERNAME"
+            
+            su test -c "keybase pgp export | gpg --import"
             
             
             # su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M001' $KEYBASE_USERNAME && gpg --recv-keys 0x0120f498c064dba2cd9eb51f2811a06519a53b0b92fde9e5e551613289946691bda40a && keybase status"
