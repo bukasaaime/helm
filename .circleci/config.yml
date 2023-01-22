@@ -300,7 +300,7 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "========================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M005' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M006' $KEYBASE_USERNAME"
             
             # su test -c "keybase pgp pull $KEYBASE_USERNAME"
             
@@ -380,7 +380,7 @@ jobs:
             echo "========================"
             # gpg --help
             
-            # su test -c 'gpg --list-secret-keys'
+            su test -c 'gpg --list-secret-keys'
             
             echo "========================"
             echo "    TEST CRYPTO - LISTING GPG PUBLIC KEY"
