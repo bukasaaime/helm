@@ -301,23 +301,27 @@ jobs:
             echo "========================"
             
             su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M002' $KEYBASE_USERNAME"
+            
+            echo "========================"
+            echo "   RUN STATUS ... "
+            echo "========================"
+            su test -c "keybase status"
+            
+            
             # su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M001' $KEYBASE_USERNAME && gpg --recv-keys 0x0120f498c064dba2cd9eb51f2811a06519a53b0b92fde9e5e551613289946691bda40a && keybase status"
             # su test -c "gpg --recv-keys 0120f498c064dba2cd9eb51f2811a06519a53b0b92fde9e5e551613289946691bda40a && keybase status"
             echo "========================"
             echo "   EXPORT KEYS FROM KEYBASE AND INPORTING THEM LOCALLY ... "
             echo "========================"
             
-            su test -c "keybase pgp export -s | gpg --import"
+            # su test -c "keybase pgp export -s | gpg --import"
             # su test -c "keybase login --password '$KEYBASE_USER_PASSWORD' $KEYBASE_USERNAME"
             # su test -c "keybase login --password '$KEYBASE_USER_PASSWORD' $KEYBASE_USERNAME"
             
             echo "========================"
-            echo "   RUN STATUS ... "
-            echo "========================"
-            su test -c "keybase status"
-            echo "========================"
             echo "   EXPORT IMPORT KEYS ... "
             echo "========================"
+            
             su test -c "keybase pgp export -s | gpg --import"
             
             echo "========================"
@@ -331,6 +335,7 @@ jobs:
             # su test -c "whoami && id && keybase login --paperkey=$KEYBASE_PAPERKEY --devicename="$KEYBASE_DEVICENAME" $KEYBASE_USERNAME"
             # su test -c "login -paperkey '$KEYBASE_PAPERKEY' -devicename '$KEYBASE_DEVICENAME' $KEYBASE_USERNAME && keybase pgp export -s | gpg --import"
             # su test -c "whoami && id && keybase pgp export -s | gpg --import"
+            
             echo "========================"
             echo "    SU TEST ... "
             echo "========================"
