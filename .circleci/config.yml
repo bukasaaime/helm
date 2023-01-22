@@ -300,7 +300,7 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "========================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M002' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M003' $KEYBASE_USERNAME"
             
             echo "========================"
             echo "   RUN STATUS ... "
