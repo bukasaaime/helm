@@ -58,7 +58,10 @@ for chart in "${charts[@]}"
 do
     if [ -z $BUILD_NUM ] || [ -z $GIT_SHA1 ]; then # we're most likely not running in CI
         # Probably running on someone's machine
-        helm package -u -d ./repo "$chart"
+        # helm package -u -d ./repo "$chart"
+        # helm package --sign --key 'John Smith' --keyring path/to/keyring.secret mychart
+        # helm package --sign --key $KEYBASE_USERNAME --keyring '/home/test/.gnupg/pubring.kbx' "$chart"
+        helm package --sign --key $KEYBASE_USERNAME --keyring '/home/test/.gnupg/secring.kbx' "$chart"
     elif [ -z $GITHUB_TAG ]; then # we're probably running in CI, but this is not a job triggered by a tag
         set -u
         # When $GITHUB_TAG is not present, we'll build a development version. This versioning
@@ -68,12 +71,14 @@ do
         # possible to specify a development version in requirements.yaml.
         CURRENT_VERSION=$(grep '^version: [0-9]\+\.[0-9]\+\.[0-9]\+\s*$' "$chart/Chart.yaml" | cut -d' ' -f2)
         NEW_VERSION="$CURRENT_VERSION-$BUILD_NUM.${GIT_SHA1:0:7}"
-        helm package -u -d ./repo "$chart" --version="$NEW_VERSION"
+        # helm package -u -d ./repo "$chart" --version="$NEW_VERSION"
+        helm package --sign --key $KEYBASE_USERNAME --keyring '/home/test/.gnupg/secring.kbx' "$chart" --version="$NEW_VERSION"
         set +u
     else # we're probably running in CI, this is a job triggered by a tag/release
         # When $GITHUB_TAG is present, we're actually releasing the chart- so we won't modify any
         # versions
-        helm package -u -d ./repo "$chart"
+        # helm package -u -d ./repo "$chart"
+        helm package --sign --key $KEYBASE_USERNAME --keyring '/home/test/.gnupg/secring.kbx' "$chart"
     fi
 done
 
