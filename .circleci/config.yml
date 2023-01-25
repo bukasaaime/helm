@@ -296,11 +296,11 @@ jobs:
             ##### KEYBASE_DEVICENAME is random. We give any name.
             ##### You use a Paper Key to Provision a Device [ computer machine ]
             
-            echo "========================"
+            echo "======================================"
             echo "   MACHINE PROVISIONING AND LOGIN ... "
-            echo "========================"
+            echo "======================================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M007' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M009' $KEYBASE_USERNAME"
             
             # su test -c "keybase pgp pull $KEYBASE_USERNAME"
             
@@ -326,6 +326,10 @@ jobs:
             ################### with -s ==> secret key ##############
             
             su test -c "keybase pgp export -s | gpg --import"
+            
+            su test -c "keybase sing 'This is it ... '"
+            
+            # helm package --sign --key 'John Smith' --keyring path/to/keyring.secret mychart
             
             
             # su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M001' $KEYBASE_USERNAME && gpg --recv-keys 0x0120f498c064dba2cd9eb51f2811a06519a53b0b92fde9e5e551613289946691bda40a && keybase status"
