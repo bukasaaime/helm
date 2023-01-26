@@ -302,7 +302,7 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "======================================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M015' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M016' $KEYBASE_USERNAME"
             
             # su test -c "keybase pgp pull $KEYBASE_USERNAME"
             
@@ -321,9 +321,9 @@ jobs:
             
             ## su test -c "keybase pgp export | gpg --import"
             
-            echo "========================"
-            echo "   PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s | gpg --import ] ... "
-            echo "========================"
+            echo "=========================================================================================="
+            echo "   M015 -PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s | gpg --import ] ... "
+            echo "=========================================================================================="
             
             ################### with -s ==> secret key ##############
             
@@ -334,7 +334,11 @@ jobs:
             
             # su test -c "echo -e '$KEYBASE_PRKEY' > PRIVATE_GPG_KEY.asc"
             
-            su test -c "echo -e '$KEYBASE_PRKEY' | gpg --import"
+            # su test -c "echo -e '$KEYBASE_PRKEY' | gpg --import"
+            
+            su test -c "keybase pgp export -s | gpg --import"
+            
+            
             
             
             # su test -c "keybase sing 'This is it ... '"
