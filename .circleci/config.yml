@@ -219,6 +219,8 @@ jobs:
   
   test:
     executor: default-docker-helm
+    environment:
+      PASSWORD: $KEYBASE_USER_PASSWORD
     steps:
       - run:
           <<: *defaults_Dependencies
@@ -300,7 +302,7 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "======================================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M00B' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M00C' $KEYBASE_USERNAME"
             
             # su test -c "keybase pgp pull $KEYBASE_USERNAME"
             
@@ -326,7 +328,7 @@ jobs:
             ################### with -s ==> secret key ##############
             
             #su test -c "keybase pgp export -s | gpg --import"
-            su test -c "keybase pgp export --secret --unencrypted | gpg --import"
+            su test -c "keybase pgp export --secret --unencrypted | gpg --import --PASSWORD"
             
             # su test -c "keybase sing 'This is it ... '"
             
