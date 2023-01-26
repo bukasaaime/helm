@@ -302,7 +302,7 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "======================================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M00D' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M00E' $KEYBASE_USERNAME"
             
             # su test -c "keybase pgp pull $KEYBASE_USERNAME"
             
@@ -328,7 +328,7 @@ jobs:
             ################### with -s ==> secret key ##############
             
             #su test -c "keybase pgp export -s | gpg --import"
-            su test -c "keybase pgp export --secret --unencrypted | gpg --import" --password $PASSWORD
+            su test -c "'keybase pgp export --secret --unencrypted | gpg --import' --password $PASSWORD"
             
             # su test -c "keybase sing 'This is it ... '"
             
@@ -403,7 +403,7 @@ jobs:
             echo "    TEST CRYPTO - LISTING GPG PUBLIC KEY"
             echo "========================"
             
-            su test -c 'gpg --list-keys'
+            su test -c 'gpg --list-secret-keys'
      
           
       - run:
