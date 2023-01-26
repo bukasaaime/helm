@@ -328,7 +328,7 @@ jobs:
             ################### with -s ==> secret key ##############
             
             #su test -c "keybase pgp export -s | gpg --import"
-            su test -c "keybase pgp export --secret --unencrypted | gpg --import --PASSWORD"
+            su test -c "keybase pgp export --secret --unencrypted | gpg --import" --password $PASSWORD
             
             # su test -c "keybase sing 'This is it ... '"
             
