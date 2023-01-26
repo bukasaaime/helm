@@ -302,7 +302,7 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "======================================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M00C' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M00D' $KEYBASE_USERNAME"
             
             # su test -c "keybase pgp pull $KEYBASE_USERNAME"
             
