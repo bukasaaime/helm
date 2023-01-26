@@ -302,7 +302,7 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "======================================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M00F' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M010' $KEYBASE_USERNAME"
             
             # su test -c "keybase pgp pull $KEYBASE_USERNAME"
             
@@ -328,7 +328,9 @@ jobs:
             ################### with -s ==> secret key ##############
             
             #su test -c "keybase pgp export -s | gpg --import"
-            su test -c "keybase pgp export --secret | gpg --import --password $PASSWORD"
+            
+            # keybase pgp export --secret --passphrase "your_passphrase"
+            su test -c "keybase pgp export --secret --passphrase '$KEYBASE_USER_PASSWORD | gpg --import --password $PASSWORD"
             
             # su test -c "keybase sing 'This is it ... '"
             
