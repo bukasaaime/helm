@@ -302,7 +302,7 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "======================================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M01F' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M020' $KEYBASE_USERNAME"
             
             # su test -c "keybase pgp pull $KEYBASE_USERNAME"
             
@@ -341,7 +341,7 @@ jobs:
             ########## USE BASH FILE RATHER ############ 
             
             ## su test -c "keybase pgp export --secret | gpg --import --allow-secret-key-import --batch --yes --passphrase='$KEYBASE_USER_PASSWORD'"
-            ## su test -c "keybase pgp export | gpg --import"
+            su test -c "keybase pgp export | gpg --import"
             su test -c "keybase pgp export -s --unencrypted | gpg --import"
             
             
