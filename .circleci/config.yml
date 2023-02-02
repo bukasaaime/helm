@@ -222,6 +222,9 @@ jobs:
     environment:
       PASSWORD: $KEYBASE_USER_PASSWORD
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "c5:30:fb:ff:41:d6:65:7a:69:b0:a4:e2:71:23:b5:4a"
       - run:
           <<: *defaults_Dependencies
       - checkout
@@ -302,7 +305,14 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "======================================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M023' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M024' $KEYBASE_USERNAME"
+            
+            echo "======================================"
+            echo "   DEVICE LIST ... "
+            echo "======================================"
+            
+            su test -c "keybase device list"
+            
             
             # su test -c "keybase pgp pull $KEYBASE_USERNAME"
             
@@ -322,7 +332,7 @@ jobs:
             ## su test -c "keybase pgp export | gpg --import"
             
             echo "=========================================================================================="
-            echo "   M023 -PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s --unencrypte| gpg --import ] ... "
+            echo "   M024 -PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s --unencrypte| gpg --import ] ... "
             echo "=========================================================================================="
             
             ################### with -s ==> secret key ##############
@@ -346,12 +356,14 @@ jobs:
             echo "###############################################################"
             echo " EXPORT UNENCRYPTED  .............. "
             echo "###############################################################"
-            su test -c "keybase pgp export -s --unencrypted"
+            # su test -c "keybase pgp export -s --unencrypted"
             echo "###############################################################"
             echo " IMPORT / EXPORT PRIVATE KEY .............. "
             echo "###############################################################"
-            su test -c "keybase pgp export -s --unencrypted | gpg --import"
+            # su test -c "keybase pgp export -s --unencrypted | gpg --import"
             # su test -c "keybase pgp export -s --unencrypted"
+            
+            su test -c "echo '$KEYBASE_USER_PASSWORD' | keybase pgp export --secret | gpg --import"
             
             echo "###############################################################"
             echo "LOGOUT .............. "
