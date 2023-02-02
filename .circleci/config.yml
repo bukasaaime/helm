@@ -302,7 +302,7 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "======================================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M021' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M022' $KEYBASE_USERNAME"
             
             # su test -c "keybase pgp pull $KEYBASE_USERNAME"
             
@@ -322,7 +322,7 @@ jobs:
             ## su test -c "keybase pgp export | gpg --import"
             
             echo "=========================================================================================="
-            echo "   M01F -PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s | gpg --import ] ... "
+            echo "   M022 -PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s --unencrypte| gpg --import ] ... "
             echo "=========================================================================================="
             
             ################### with -s ==> secret key ##############
@@ -341,9 +341,16 @@ jobs:
             ########## USE BASH FILE RATHER ############ 
             
             ## su test -c "keybase pgp export --secret | gpg --import --allow-secret-key-import --batch --yes --passphrase='$KEYBASE_USER_PASSWORD'"
-            su test -c "keybase pgp export | gpg --import"
-            # su test -c "keybase pgp export -s --unencrypted | gpg --import"
+            # su test -c "keybase pgp export | gpg --import"
             su test -c "keybase pgp export -s --unencrypted"
+            su test -c "keybase pgp export -s --unencrypted | gpg --import"
+            # su test -c "keybase pgp export -s --unencrypted"
+            
+            echo "###############################################################"
+            echo "LOGOUT .............. "
+            echo "###############################################################"
+            
+            keybase logout
             
             
             
