@@ -281,7 +281,7 @@ jobs:
             echo "   TEST - LIST GPG KEYS ... "
             echo "========================"
             
-            ###### su test -c "gpg --list-keys"
+            su test -c "gpg --list-keys"
             
             
             
@@ -305,13 +305,13 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "======================================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M02A' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M02B' $KEYBASE_USERNAME"
             
             echo "======================================"
             echo "   DEVICE LIST ... "
             echo "======================================"
             
-            su test -c "keybase device list"
+            ## su test -c "keybase device list"
             
             
             # su test -c "keybase pgp pull $KEYBASE_USERNAME"
@@ -332,7 +332,7 @@ jobs:
             ## su test -c "keybase pgp export | gpg --import"
             
             echo "=========================================================================================="
-            echo "   M028 -PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s --unencrypte| gpg --import ] ... "
+            echo "   M02B -PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s --unencrypte| gpg --import ] ... "
             echo "=========================================================================================="
             
             ################### with -s ==> secret key ##############
