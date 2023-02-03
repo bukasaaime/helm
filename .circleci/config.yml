@@ -305,7 +305,7 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "======================================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M02C' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M02D' $KEYBASE_USERNAME"
             
             echo "======================================"
             echo "   DEVICE LIST ... "
@@ -332,7 +332,7 @@ jobs:
             ## su test -c "keybase pgp export | gpg --import"
             
             echo "=========================================================================================="
-            echo "   M02C -PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s --unencrypte| gpg --import ] ... "
+            echo "   M02D -PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s --unencrypte| gpg --import ] ... "
             echo "=========================================================================================="
             
             ################### with -s ==> secret key ##############
@@ -379,7 +379,9 @@ jobs:
             echo "LOGIN AGAIN .............. "
             echo "###############################################################"
             
-            su test -c "keybase login"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M02D' $KEYBASE_USERNAME"
+            
+            # su test -c "keybase login"
             
             echo "========================"
             echo "   RUN STATUS ... AFTER LOGIN  "
