@@ -305,7 +305,7 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "======================================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M02E' $KEYBASE_USERNAME"
+            #  test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M02E' $KEYBASE_USERNAME"
             
             echo "======================================"
             echo "   DEVICE LIST ... "
@@ -381,7 +381,7 @@ jobs:
             
             # su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M02D' $KEYBASE_USERNAME"
             
-            # su test -c "echo '$KEYBASE_USER_PASSWORD' |keybase login"
+            su test -c "echo '$KEYBASE_USER_PASSWORD' | keybase login --devicename 'M02D' $KEYBASE_USERNAME"
             
             echo "========================"
             echo "   RUN STATUS ... AFTER LOGIN  "
