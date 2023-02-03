@@ -305,7 +305,7 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "======================================"
             
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M02B' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M02C' $KEYBASE_USERNAME"
             
             echo "======================================"
             echo "   DEVICE LIST ... "
@@ -332,12 +332,12 @@ jobs:
             ## su test -c "keybase pgp export | gpg --import"
             
             echo "=========================================================================================="
-            echo "   M02B -PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s --unencrypte| gpg --import ] ... "
+            echo "   M02C -PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s --unencrypte| gpg --import ] ... "
             echo "=========================================================================================="
             
             ################### with -s ==> secret key ##############
             
-            #su test -c "keybase pgp export -s | gpg --import"
+            # su test -c "keybase pgp export -s | gpg --import"
             
             # keybase pgp export --secret --passphrase "your_passphrase"
             ######### su test -c "keybase pgp export --secret --passphrase '$KEYBASE_USER_PASSWORD' | gpg --import"
@@ -356,7 +356,7 @@ jobs:
             echo "###############################################################"
             echo " EXPORT UNENCRYPTED  .............. "
             echo "###############################################################"
-            su test -c "keybase pgp export -s --unencrypted"
+            # su test -c "keybase pgp export -s --unencrypted"
             echo "###############################################################"
             echo " IMPORT / EXPORT PRIVATE KEY .............. "
             echo "###############################################################"
@@ -381,9 +381,12 @@ jobs:
             
             su test -c "keybase login"
             
+            echo "========================"
+            echo "   RUN STATUS ... AFTER LOGIN  "
+            echo "========================"
             
-            
-            
+            su test -c "keybase status"
+                        
             # su test -c "keybase sing 'This is it ... '"
             
             # helm package --sign --key 'John Smith' --keyring path/to/keyring.secret mychart
