@@ -305,7 +305,7 @@ jobs:
             echo "   MACHINE PROVISIONING AND LOGIN ... "
             echo "======================================"
             
-            test -c "keybase login --no-auto-fork --debug --paperkey '$KEYBASE_PAPERKEY' --devicename 'M030' $KEYBASE_USERNAME"
+            su test -c "keybase login --no-auto-fork --debug --paperkey '$KEYBASE_PAPERKEY' --devicename 'M030' $KEYBASE_USERNAME"
             
             echo "======================================"
             echo "   DEVICE LIST .... "
