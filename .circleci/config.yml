@@ -308,7 +308,7 @@ jobs:
             test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M02F' $KEYBASE_USERNAME"
             
             echo "======================================"
-            echo "   DEVICE LIST ... "
+            echo "   DEVICE LIST .... "
             echo "======================================"
             
             ## su test -c "keybase device list"
