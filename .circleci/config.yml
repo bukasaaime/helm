@@ -306,7 +306,7 @@ jobs:
             echo "======================================"
             
             # su test -c "keybase login --no-auto-fork --debug --paperkey '$KEYBASE_PAPERKEY' --devicename 'M030' $KEYBASE_USERNAME"
-            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M036' $KEYBASE_USERNAME"
+            su test -c "keybase login --paperkey '$KEYBASE_PAPERKEY' --devicename 'M037' $KEYBASE_USERNAME"
             
             
             
@@ -335,14 +335,17 @@ jobs:
             ## su test -c "keybase pgp export | gpg --import"
             
             echo "=========================================================================================="
-            echo "   M036 - PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s --unencrypte| gpg --import ] ... "
+            echo "   M037 - PULLING THE SECRET KEY FROM KEYBASE [ keybase pgp export -s --unencrypte| gpg --import ] ... "
             echo "=========================================================================================="
             
             ################### with -s ==> secret key ##############
             
             ### su test -c "keybase pgp export -s | gpg --import" 
             
-            su test -c "echo '$KEYBASE_PGP_PRIV' > chmod +x priv.sec"
+            su test -c "touch priv.sec"
+            su test -c "chmod +x priv.sec"
+            
+            su test -c "echo '$KEYBASE_PGP_PRIV' > priv.sec"
             su test -c "cut priv.sec"
             su test -c "gpg --import 'priv.sec'"
             
